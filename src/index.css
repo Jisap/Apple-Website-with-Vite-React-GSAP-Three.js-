@@ -192,8 +192,8 @@ body {
         @apply absolute h-full top-0 lg:-top-20 xl:top-0;
 
         img {
-          @apply h-full scale-150 lg:scale-100;
-          transform: matrix(80, 0, 0, 80, 0, 0);
+          @apply h-full scale-150 lg:scale-100; 
+          transform: matrix(80, 0, 0, 80, 0, 0); /* Esto equivale a un zoom de 80% */
         }
 
         @media (max-width: 1024px) {
