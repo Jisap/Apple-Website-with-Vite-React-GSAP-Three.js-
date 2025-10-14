@@ -19,9 +19,9 @@ export default function MacbookModel16(props) {
   const { color } = useMacbookStore();
   const { nodes, materials, scene } = useGLTF('/models/macbook-16-transformed.glb')
 
-  const texture = useTexture('/screen.png');
-  texture.colorSpace = SRGBColorSpace;
-  texture.needsUpdate = true;
+  const texture = useTexture('/screen.png'); // Carga la imagen /screen.png para usarla como textura. 
+  texture.colorSpace = SRGBColorSpace;       // Configura la textura para que sus colores se interpreten correctamente dentro del motor 3D (sRGB).
+  texture.needsUpdate = true;                // Notifica al motor que debe aplicar esta nueva configuración.
 
   useEffect(() => {
     scene.traverse((child) => {
